@@ -2175,20 +2175,17 @@ html, body { overflow-x: hidden; }
 /* ===== Mobile-only carousel fixes (<=768px) ===== */
 @media (max-width: 768px) {
   /* Prevent overflow and allow intrinsic height based on image ratio */
-  .carousel-container,
-  .gallery-section .carousel-container {
+  .carousel-container {
     max-width: 100vw !important;
     width: 100% !important;
   }
 
   .carousel-track {
     align-items: center !important;
-    gap: 0 !important;
   }
 
   /* Remove rigid heights on mobile and cap to viewport height */
-  .carousel-item,
-  .gallery-section .carousel-item {
+  .carousel-item.carousel-item {
     height: auto !important;
     max-height: 80vh !important;
     display: flex !important;
@@ -2197,10 +2194,9 @@ html, body { overflow-x: hidden; }
   }
 
   /* Show full image without distortion; never exceed device width/height */
-  .carousel-item img,
-  .gallery-section .carousel-item img {
-    width: 88% !important;
-    max-width: 88vw !important;
+  .carousel-item.carousel-item img {
+    width: 90% !important;
+    max-width: 90vw !important;
     height: auto !important;
     max-height: 80vh !important;
     object-fit: contain !important;
