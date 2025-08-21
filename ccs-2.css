@@ -2050,6 +2050,58 @@ html, body { overflow-x: hidden; }
   .gallery-section .carousel-item { flex: 0 0 100% !important; max-width: 100% !important; }
 }
 
+/* === Mobile-only carousel fixes: contain images, auto height, centered nav === */
+@media (max-width: 768px) {
+	.carousel-container {
+		width: 100vw;
+		max-width: 100vw;
+		height: auto !important;
+		max-height: 100vh;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	.carousel-track {
+		height: auto !important;
+		align-items: center;
+		gap: 0 !important;
+	}
+
+	.carousel-item {
+		flex: 0 0 100vw !important;
+		width: 100vw !important;
+		max-width: 100vw;
+		height: auto !important; /* anula alturas rígidas */
+		max-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-sizing: border-box;
+		transform: none !important; /* anula desplazamientos del item */
+	}
+
+	.carousel-item img {
+		display: block;
+		max-width: 100vw;
+		max-height: 100vh;
+		width: auto !important;
+		height: auto !important;
+		object-fit: contain;
+		object-position: center center;
+		margin: 0 auto;
+		transform: none !important; /* anula desplazamientos en la imagen */
+	}
+
+	.carousel-prev,
+	.carousel-next {
+		position: absolute;
+		top: 50% !important;
+		transform: translateY(-50%) !important;
+		z-index: 3;
+		pointer-events: auto;
+	}
+}
+
 /* Móvil: centrar imágenes y mostrarlas completas en el carrusel */
 @media (max-width: 768px) {
   .gallery-section .carousel-item {
