@@ -2215,4 +2215,17 @@ html, body { overflow-x: hidden; }
     top: 50% !important;
     transform: translateY(-50%) !important;
   }
+
+  /* Swiper mobile carousel: make images slightly smaller */
+  .carousel-mobile .swiper-slide img,
+  .swiper-slide img {
+    width: 88% !important;
+    max-width: 88vw !important;
+    height: auto !important;
+    max-height: 88vh !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
 }
